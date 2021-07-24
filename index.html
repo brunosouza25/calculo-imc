@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cálculo IMC</title>
+        <link rel="stylesheet" href="style/style.css" />
+    </head>
+    <body>
+        <section>
+            <div class="container">
+                <h2 style="text-align: center">O que é IMC?</h2>
+                <div class="texto">
+                    <p>
+                        O IMC "Índice de Massa Coporal" é um cálculo que avalia
+                        a pessoa se esta dentro dos padrões de saúde com relação
+                        do peso e altura.
+                    </p>
+                    <p>
+                        Com essa informação a pessoa pode começar a ter uma
+                        noção de saúde básica com relação ao seu peso.
+                    </p>
+                    <p>
+                        Logo abaixo da tabela existem dois campos "Tamanho" e
+                        "Altura" para você mesmo fazer o calculo do seu IMC.
+                    </p>
+                </div>
+
+                <table class="tableImc">
+                    <tr>
+                        <th>IMC</th>
+                        <th>Classificação</th>
+                        <th>Grau obsidade</th>
+                    </tr>
+                    <tr>
+                        <td>Menor que 18,5</td>
+                        <td>Magreza</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Entre 18,5 e 24,9</td>
+                        <td>Normal</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Entre 25,0 e 29,9</td>
+                        <td>Acima do peso</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Entre 30,0 e 39,9</td>
+                        <td>Obesidade</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Acima de 40</td>
+                        <td>Obesidade grave</td>
+                        <td>0</td>
+                    </tr>
+                </table>
+
+                <div id="result" class="result"></div>
+
+                <div class="data">
+                    <div class="dataBlocks">
+                        <label for="altura">Altura:
+                            <br>
+                            <input placeholder="Metros" class="inputData" type="number" id="height">
+                        </label>
+                    </div>
+
+                    <div class="dataBlocks">
+                        <label for="peso">
+                            Peso:
+                            <br>
+                            <input placeholder="Quilos" class="inputData" type="number" id="weight">
+                        </label>
+                    </div>
+                </div>
+
+                <div style="max-width: 80%; margin: auto; margin-top: 15px">
+                    <button id="button" class="button"><b>Calcular</b></button>
+                </div>
+            </div>
+        </section>
+        <script src="js/script.js"></script>
+    </body>
+</html>
