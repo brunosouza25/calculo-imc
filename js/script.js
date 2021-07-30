@@ -1,15 +1,15 @@
 const button = document.getElementById('button');
 
 document.getElementById('height').onkeydown = function (event) {
-    if(event.key != "Enter"){
-        return; 
+    if (event.key != "Enter") {
+        return;
     }
     calculateIMC();
 }
 
 document.getElementById('weight').onkeydown = function (event) {
-    if(event.key != "Enter"){
-        return; 
+    if (event.key != "Enter") {
+        return;
     }
     calculateIMC();
 }
@@ -30,7 +30,7 @@ function calculateIMC() {
     const imc = weight / height ** 2;
 
     if (isNaN(imc)) {
-        writeInHtml(`IMC Inválido`, "redResult");
+        writeResultImc(`IMC Inválido`, "redResult");
         return;
     }
 
@@ -48,25 +48,22 @@ function calculateIMC() {
     } else if (imc >= 18.5) {
         text = `Seu IMC é: ${imc.toFixed(2)} (Normal)`;
         classColor = "greenResult";
-    } else if ((imc <= 18, 5)) {
-        text = `Seu IMC é: ${imc.toFixed(2)} (Magreza)`;
-        classColor = "redResult";
     } else {
-        text = `IMC Inválido`;
+        text = `Seu IMC é: ${imc.toFixed(2)} (Magreza)`;
         classColor = "redResult";
     }
 
-    writeInHtml(text, classColor);
+    writeResultImc(text, classColor);
 }
 
-function writeInHtml(text, classColor) {
+function writeResultImc(text, classColor) {
     const result = document.getElementById("result");
-    clearClass(result);
+    clearClassResultImc(result);
     result.classList.add(classColor);
     result.innerHTML = text;
 }
 
-function clearClass(element) {
+function clearClassResultImc(element) {
     element.classList.remove("redResult");
     element.classList.remove("greenResult");
 }
