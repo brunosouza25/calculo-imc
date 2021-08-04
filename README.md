@@ -1,1 +1,1 @@
-<h3>Pequeno projeto para o estudo e prática de JavaScript.</h3>
+<h3>Pequeno projeto para o estudo e pratica de JavaScript.</h3>
